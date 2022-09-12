@@ -3,38 +3,27 @@
 /**
  * main - Entry point
  * Description: prints all possible combinations of two two-digit numbers
- * Return: Always return (0)
+ * Return: Always (0) success
  */
 int main(void)
 {
-	int c, i, j, k;
+	int i, j;
 
-	for (c = 48; c <= 57; c++)
+	for (i = 0; i < 100; i++)
 	{
-		for (i = 48; i <= 57; i++)
+		for (j = 0; j < 100; j++)
 		{
-			for (j = 48; j <= 57; j++)
+			if (i < j)
 			{
-				for (k = 48; k <= 57; k++)
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
 				{
-					if (((j + k) > (c + i) &&  j >= c) || c < j)
-					{
-						putchar(c);
-						putchar(i);
-						putchar(' ');
-						putchar(j);
-						putchar(k);
-
-						if (c + i + j + k == 227 && c == 57)
-						{
-						break;
-						}
-						else
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
