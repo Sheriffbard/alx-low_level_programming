@@ -303,4 +303,3 @@ void print_osabi(unsigned char *e_ident)
 	free(header);
 	close_elf(o);
 	return (0);
-}
