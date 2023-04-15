@@ -4,7 +4,7 @@
  * linear_skip - skippity skip search singular linked list
  * @list: pointer to head node
  * @value: value to search for
- *AYTHOR : ADEYEMI
+ * Author : ADRYRMI
  * Return: the node found or NULL
  */
 skiplist_t *linear_skip(skiplist_t *list, int value)
@@ -18,7 +18,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	{
 		if (!list->express)
 			break;
-	i	last = list;
+		last = list;
 		list = list->express;
 		printf("Value checked at index [%lu] = [%d]\n", list->index, list->n);
 	}
